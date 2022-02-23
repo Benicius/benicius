@@ -1,3 +1,4 @@
+/*
 package com.coffee.starbux.benicius;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -8,3 +9,4 @@ public class PasswordEncoder {
         System.out.println(passwordEncoder.encode("starbux"));
     }
 }
+*/
