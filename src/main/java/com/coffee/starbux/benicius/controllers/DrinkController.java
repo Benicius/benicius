@@ -25,8 +25,13 @@ public class DrinkController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Drink>> findOnlyDrink(@PathVariable Long id){
+    public ResponseEntity<Optional<Drink>> findOnlyDrink(@PathVariable("id") Long id){
         return new ResponseEntity<>(drinkService.findOnlyDrink(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/filter")
+    public ResponseEntity<List<Drink>> findByName(@RequestParam("name") String name){
+        return new ResponseEntity<>(drinkService.findByName(name), HttpStatus.OK);
     }
 
     @PostMapping("/create")
