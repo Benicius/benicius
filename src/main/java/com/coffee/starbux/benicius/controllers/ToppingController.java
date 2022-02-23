@@ -5,6 +5,7 @@ import com.coffee.starbux.benicius.services.ToppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class ToppingController {
     }
 
     @GetMapping("/")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<Topping>> findAll(){
         return new ResponseEntity<>(toppingService.findAll(), HttpStatus.OK);
     }
