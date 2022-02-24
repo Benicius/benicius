@@ -12,6 +12,5 @@ import java.util.List;
 public interface DrinkRepository extends JpaRepository<Drink, Long> {
 
     List<Drink> findByNameContains(String name);
-
-    Drink findByIdCart(Long id);
+    Drink findByName(String name);
 }

@@ -1,4 +1,3 @@
-/*
 package com.coffee.starbux.benicius.repository;
 
 import com.coffee.starbux.benicius.domains.Cart;
@@ -11,4 +10,3 @@ import javax.transaction.Transactional;
 @Transactional
 public interface CartRepository extends JpaRepository<Cart, Long> {
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.coffee.starbux.benicius.domains;
 
 public enum CartStatus {
@@ -7,4 +6,3 @@ public enum CartStatus {
     CANCELED,
     CLOSED
 }
-*/

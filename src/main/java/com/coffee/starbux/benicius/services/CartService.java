@@ -1,4 +1,3 @@
-/*
 package com.coffee.starbux.benicius.services;
 
 import com.coffee.starbux.benicius.domains.Cart;
@@ -31,8 +30,7 @@ public class CartService {
         if (!isEmpty(cart.getCartItems()) ){
             for (CartItem item: cart.getCartItems()) {
                 Optional<Drink> drinkTemp = findDrinkByCart(item.getId());
-                */
-/*item.setDrink(drinkTemp);*//*
+                /*item.setDrink(drinkTemp);*/
 
             }
         }
@@ -43,4 +41,3 @@ public class CartService {
         return drinkRepository.findById(id);
     }
 }
-*/

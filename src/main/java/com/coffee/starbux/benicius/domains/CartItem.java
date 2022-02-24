@@ -1,4 +1,3 @@
-/*
 package com.coffee.starbux.benicius.domains;
 
 import javax.persistence.*;
@@ -58,4 +57,3 @@ public class CartItem {
         this.totalPriceProduct = totalPriceProduct;
     }
 }
-*/

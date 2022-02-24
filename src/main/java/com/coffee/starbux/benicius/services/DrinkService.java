@@ -35,4 +35,8 @@ public class DrinkService {
     public Drink updateDrink(Drink drink){
         return drinkRepository.save(drink);
     }
+
+    public void deleteDrink(Long id){
+        drinkRepository.deleteById(id);
+    }
 }
