@@ -2,16 +2,15 @@ package com.coffee.starbux.benicius.helpers;
 
 import com.coffee.starbux.benicius.domains.Drink;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import static com.coffee.starbux.benicius.helpers.ConstantsHelperMock.*;
 
-public final class MockHelper {
+public final class MockDrinkHelper {
 
-    public MockHelper() {
+    public MockDrinkHelper() {
     }
 
     public static Drink mockValidDrink(){

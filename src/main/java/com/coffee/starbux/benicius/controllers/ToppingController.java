@@ -23,7 +23,6 @@ public class ToppingController {
     }
 
     @GetMapping("/")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<Topping>> findAll(){
         return new ResponseEntity<>(toppingService.findAll(), HttpStatus.OK);
     }
@@ -39,11 +38,13 @@ public class ToppingController {
     }
 
     @PostMapping("/create")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Topping> saveTopping(@RequestBody Topping topping){
         return new ResponseEntity<>(toppingService.saveTopping(topping), HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Topping> updateTopping(@RequestBody Topping topping){
         return new ResponseEntity<>(toppingService.updateTopping(topping), HttpStatus.CREATED);
     }

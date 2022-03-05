@@ -12,4 +12,5 @@ import java.util.List;
 public interface ToppingRepository extends JpaRepository<Topping, Long> {
 
     List<Topping> findByNameContains(String name);
+    Topping findByName(String name);
 }
