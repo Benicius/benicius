@@ -1,3 +1,4 @@
+/*
 package com.coffee.starbux.benicius.config;
 
 import com.coffee.starbux.benicius.services.CustomUserDetailService;
@@ -36,3 +37,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(new BCryptPasswordEncoder());
     }
 }
+*/

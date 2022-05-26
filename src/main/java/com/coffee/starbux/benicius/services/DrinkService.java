@@ -24,8 +24,8 @@ public class DrinkService {
         return drinkRepository.findById(id);
     }
 
-    public List<Drink> findByName(String name){
-        return drinkRepository.findByNameContains(name);
+    public Drink findByName(String name){
+        return drinkRepository.findByName(name);
     }
 
     public Drink saveDrink(Drink drink){

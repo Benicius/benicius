@@ -5,7 +5,6 @@ import com.coffee.starbux.benicius.services.ToppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,13 +37,11 @@ public class ToppingController {
     }
 
     @PostMapping("/create")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Topping> saveTopping(@RequestBody Topping topping){
         return new ResponseEntity<>(toppingService.saveTopping(topping), HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Topping> updateTopping(@RequestBody Topping topping){
         return new ResponseEntity<>(toppingService.updateTopping(topping), HttpStatus.CREATED);
     }

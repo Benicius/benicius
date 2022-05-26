@@ -1,3 +1,4 @@
+/*
 package com.coffee.starbux.benicius.domains;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -60,3 +61,4 @@ public class User extends AbstractEntity {
         this.admin = admin;
     }
 }
+*/
