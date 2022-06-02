@@ -1,3 +1,4 @@
+/*
 package com.coffee.starbux.benicius.services;
 
 import com.coffee.starbux.benicius.domains.Drink;
@@ -63,11 +64,14 @@ public class DrinkServiceTest {
         assertNotNull(drink);
     }
 
-    /*@Test
+    */
+/*@Test
     public void shouldReturnFindByNameContains(){
         when(drinkRepository.findByNameContains(any())).thenReturn(mockListOfDrinks());
         List<Drink> drinks = drinkService.findByName("c");
 
         assertThat(drinks.get(0).getName()).isEqualTo(DRINK_NAME_UPDATED);
-    }*/
+    }*//*
+
 }
+*/

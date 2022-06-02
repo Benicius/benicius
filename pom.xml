@@ -15,7 +15,17 @@
 	<description>System of startup starbux</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.coverage.exclusions>
+			src/test/java/**/*,
+			**/config/*.java,
+			**/constants/*.java,
+			**/controllers/*.java,
+			**/domains/*.java,
+			**/repository/*.java,
+			**/BeniciusApplication.java
+		</sonar.coverage.exclusions>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -60,6 +70,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.3</version>
+				<configuration>
+					<excludes>
+						<exclude>**/config/*.class</exclude>
+						<exclude>**/constants/*.class</exclude>
+						<exclude>**/controllers/*.class</exclude>
+						<exclude>**/domains/*.class</exclude>
+						<exclude>**/repository/*.class</exclude>
+						<exclude>**/BeniciusApplication.class</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

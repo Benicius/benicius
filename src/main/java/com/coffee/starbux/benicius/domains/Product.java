@@ -1,23 +1,24 @@
 package com.coffee.starbux.benicius.domains;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 
-@MappedSuperclass
-@Table(name = "product")
-public class Product implements Serializable {
+@Entity
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
     private Long id;
 
-    @Column(name = "name", length = 100)
     private String name;
 
-    @Column(name = "price", precision = 16, scale = 2)
     private BigDecimal price;
+
+    @Enumerated(EnumType.STRING)
+    private Type type;
+
+    public Product() {
+    }
 
     public Long getId() {
         return id;
@@ -42,4 +43,13 @@ public class Product implements Serializable {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
 }

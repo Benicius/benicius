@@ -1,4 +1,4 @@
-package com.coffee.starbux.benicius.contants;
+package com.coffee.starbux.benicius.constants;
 
 public class ApiConstants {
 
